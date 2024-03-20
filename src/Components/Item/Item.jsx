@@ -1,11 +1,11 @@
-import React from 'react'
+import React from 'react';
 import './Item.css';
 import { Link } from 'react-router-dom';
 
 const Item = (props) => {
   return (
     <div className='item'>
-      <Link to={`/products/${props.id}`}><img src={props.image} alt='' /></Link>
+      <Link to={`/products/${props.id}`}><img src={props.image} alt=''/></Link>                                                                                                 
       <p>{props.name}</p>
       <div className='item__prices'>
         <div className='item__price__new'>
@@ -21,4 +21,17 @@ const Item = (props) => {
 
 
 
-export default Item
+
+
+
+
+
+
+
+
+
+
+
+
+
+export default Item;
