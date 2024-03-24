@@ -14,6 +14,7 @@ const Offers = () => {
       <div className='offers__right'>
         <img src={exclusive_image} alt='' />
       </div>
+
     </div>
   )
 }
