@@ -36,3 +36,46 @@
     background: #ffff;
     border-radius: 10px;
 }
+.cartitems__down {
+    display: flex;
+    margin: 100px 0px;
+}
+.cartitems__total {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    margin-right: 200px;
+    gap: 40px;
+}
+.cartitems__totalitems {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 0px;
+}
+
+.cartitems__total button {
+    width: 262px;
+    height: 58px;
+    outline: none;
+    border: none;
+    background: #ff5a5a;
+    color: #ffff;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+}
+.cartitems__promocode {
+    flex: 1;
+    font-size: 16px;
+    font-weight: 500;
+}
+.cartitems__promocode p {
+    color: #555;
+}
+.cartitems__promobox {
+    width: 504px;
+    margin-top: 15px;
+    padding-left: 20px;
+    height: 58px;
+    background: #eaeaea;
+}
