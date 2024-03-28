@@ -6,7 +6,7 @@ import cartitem__product from '../Assests/cart_product_icon.png';
  
 const CartItems = () => {
 
-    const {all_product, cartItems, removeFromCart} = useContext(ShopContext);
+    const {getTotalCartAmount, all_product, cartItems, removeFromCart} = useContext(ShopContext);
 
   return (
     <div className='cartitems'>
@@ -41,7 +41,7 @@ const CartItems = () => {
             <h1>Cart Total</h1>
             <div className='cartitems__totalitems'>
               <p>Subtotal</p>
-              <p>${0}</p>
+              <p>${getTotalCartAmount()}</p>
             </div>
             <hr />
             <div className='cartitems__totalitems'>
@@ -51,7 +51,7 @@ const CartItems = () => {
             <hr />
             <div className='cartitems__totalitems'>
               <h3>Total</h3>
-              <h3>${0}</h3>
+              <h3>${getTotalCartAmount()}</h3>
             </div>
             <button>PROCEED TO CHECHOUT</button>
           </div>

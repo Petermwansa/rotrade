@@ -23,8 +23,20 @@ const ShopContextProvider = (props) => {
         setCartItems((prev) => ({...prev,[itemId]:prev[itemId]-1 }))
     }
 
+    const getTotalCartAmount = () => {
+        let totalAmount = 0;
+        // in this for loop, we are passing the cartItems from the cart 
+        for(const item in cartItems) {
+            if(cartItems[item]>0) {
+                let itemInfo = all_product.find((product) => product.id === Number(item))
+                totalAmount += itemInfo.new_price * cartItems[item];
+            }
+            return totalAmount;
+        }
+    }
+
     // we passed it using the context value so that we can access the cartItem data in any component 
-    const contextValue = {all_product, cartItems, addToCart, removeFromCart};
+    const contextValue = {all_product, cartItems, addToCart, removeFromCart, getTotalCartAmount};
 
     return (
         <ShopContext.Provider value={contextValue}>
