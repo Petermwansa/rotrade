@@ -2,7 +2,6 @@ import React, {useContext} from 'react';
 import './CartItems.css';
 import { ShopContext } from '../../Context/Context';
 import remove__icon from '../Assests/cart_cross_icon.png';
-import cartitem__product from '../Assests/cart_product_icon.png';
  
 const CartItems = () => {
 
