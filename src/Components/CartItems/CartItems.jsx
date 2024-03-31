@@ -62,7 +62,6 @@ const CartItems = () => {
           </div>
         </div>
         </div>
-
       </div>
     </div>
   )

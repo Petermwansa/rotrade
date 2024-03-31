@@ -36,7 +36,7 @@ const ShopContextProvider = (props) => {
     }
 
     // we passed it using the context value so that we can access the cartItem data in any component 
-    const contextValue = {all_product, cartItems, addToCart, removeFromCart, getTotalCartAmount};
+    const contextValue = {getTotalCartAmount, all_product, cartItems, addToCart, removeFromCart};
 
     return (
         <ShopContext.Provider value={contextValue}>
