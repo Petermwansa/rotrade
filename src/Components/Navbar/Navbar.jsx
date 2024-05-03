@@ -4,6 +4,8 @@ import logo from "../Assests/logo.png";
 import cart_icon from "../Assests/cart_icon.png";
 import { Link } from 'react-router-dom';
 import { ShopContext } from '../../Context/Context';
+import { createPortal } from 'react-dom';
+
 
 
 const Navbar = () => {
@@ -11,7 +13,7 @@ const Navbar = () => {
     const [menu, setMenu] = useState("shop")
     const {gettotalCartItems} = useContext(ShopContext);
 
-  return (
+  return createPortal(
     <div className='navbar'>
       <div className='nav__log'>
         <img src={logo} alt='' />
@@ -28,8 +30,9 @@ const Navbar = () => {
         <Link style={{textDecoration: 'none'}} to={'/cart'}><img src={cart_icon} alt=''/></Link>
         <div className='nav__cart__count'>{gettotalCartItems()}</div>
       </div>
-    </div>
+    </div>,
+    document.getElementById("navbar")
   )
 }
 
-export default Navbar
+export default Navbar;
